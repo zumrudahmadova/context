@@ -1,22 +1,23 @@
 
-import './App.css';
-
-import {Routes, Route, Router} from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Products from "./components/Products/Products";
-import ProductCard from "./components/ProductCard";
-import Index from "./components";
 import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import './App.css'
+import {Route, Routes} from "react-router-dom";
+import CardList from "./components/CardList/CardList";
+import Store from "./components/Store/Store";
 function App() {
   return (
 
-<>
-    <Index/>
+<div className='app'>
+   <Navbar/>
     <Routes>
-        <Route path='/home'/>
-        <Route path='/products' element={<Products/>}/>
+        <Route path="/" element={<CardList/>}/>
+        <Route path='/cardList' element={<CardList/>}/>
+        <Route path='/store' element={<Store/>}/>
+
     </Routes>
-</>
+
+</div>
   );
 }
 
